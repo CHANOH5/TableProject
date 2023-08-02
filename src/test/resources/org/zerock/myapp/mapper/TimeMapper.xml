@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+	 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace = "org.zerock.myapp.mapper.TimeMapper"> <!-- TimeMapper인터페이스이 FQCN으로 정하세요!! -->
+
+	<select id="getNow2"> <!-- TimeMapper에서 xml처리할 메소드의 이름 -->
+		SELECT /*+ TimeMapper */ current_date FROM dual
+	</select>
+						   <!-- 자 이제 이 sql문장을 어떻게 등록시키냐! 가 문제 -->
+						   <!--  위 /**/ 주석은 어노테이션준 인터페이스와 다르다는걸 알려주기위해 -->
+</mapper>
